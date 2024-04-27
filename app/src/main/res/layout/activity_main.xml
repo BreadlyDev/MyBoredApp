@@ -4,185 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".ui.activities.MainActivity"
     android:background="@drawable/blue_background">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserratbold"
-        android:text="Ваша активность"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="32sp"
-        android:layout_marginTop="100dp"
-        android:shadowColor="#80000000"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:shadowRadius="15"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment_content_base"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:fontFamily="monospace"
-            android:text="Активность:"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:shadowColor="#80000000"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="15"
-            />
-
-
-        <TextView
-            android:id="@+id/txt_activity"
-            android:layout_width="300sp"
-            android:layout_height="100sp"
-            android:layout_marginBottom="20sp"
-            android:background="@drawable/background_white"
-            android:paddingHorizontal="10sp"
-            android:textSize="24sp"
-            android:textColor="@color/blue"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:fontFamily="monospace"
-            android:text="Тип активности:"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:shadowColor="#80000000"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="15"
-            android:inputType="none" />
-
-
-        <TextView
-            android:id="@+id/txt_type"
-            android:layout_width="300sp"
-            android:layout_height="40sp"
-            android:layout_marginBottom="20sp"
-            android:background="@drawable/background_white"
-            android:paddingHorizontal="10sp"
-            android:textSize="24sp"
-            android:textColor="@color/blue"
-            android:textAlignment="center" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:fontFamily="monospace"
-            android:text="Кол-во участников:"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:shadowColor="#80000000"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="15"
-            android:textSize="24sp" />
-
-
-        <TextView
-            android:id="@+id/txt_participants"
-            android:layout_width="300sp"
-            android:layout_height="40sp"
-            android:layout_marginBottom="20sp"
-            android:background="@drawable/background_white"
-            android:paddingHorizontal="10sp"
-            android:textAlignment="center"
-            android:textColor="@color/blue"
-            android:textSize="24sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:fontFamily="monospace"
-            android:text="Стоимость:"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:shadowColor="#80000000"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="15"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/txt_price"
-            android:layout_width="300sp"
-            android:layout_height="40sp"
-            android:layout_marginBottom="20sp"
-            android:background="@drawable/background_white"
-            android:paddingHorizontal="10sp"
-            android:textSize="24sp"
-            android:textColor="@color/blue"
-            android:textAlignment="center" />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:fontFamily="monospace"
-            android:text="Доступность:"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:shadowColor="#80000000"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="15"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/txt_accessibility"
-            android:layout_width="300sp"
-            android:layout_height="40sp"
-            android:layout_marginBottom="20sp"
-            android:background="@drawable/background_white"
-            android:paddingHorizontal="10sp"
-            android:textSize="24sp"
-            android:textColor="@color/blue"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/btn_get_task"
-            android:layout_marginTop="20dp"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:backgroundTint="#38B83A"
-            android:fontFamily="monospace"
-            android:paddingHorizontal="40sp"
-            android:paddingVertical="12sp"
-            android:shadowColor="#80000000"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="15"
-            android:text="Получить активность"
-            android:textSize="18sp" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
